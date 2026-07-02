@@ -1,0 +1,39 @@
+name: ✨ Feature request
+description: Something new the product should do
+title: "[feat] "
+labels: ["type:feature"]
+body:
+  - type: dropdown
+    id: app
+    attributes:
+      label: App
+      description: Where does this feature live?
+      options:
+        - Backend
+        - Web
+        - Dashboard
+        - Mobile
+        - Desktop
+        - Multiple
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What can't a user (or the team) do today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: How should it work? Remember both languages (ar/en) if it adds UI copy.
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Suggested priority
+      options:
+        - P0 — blocks launch
+        - P1 — next up
+        - P2 — when possible

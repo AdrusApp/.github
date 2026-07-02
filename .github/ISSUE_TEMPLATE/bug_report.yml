@@ -1,0 +1,51 @@
+name: 🐞 Bug report
+description: Something is broken or behaving wrong
+title: "[bug] "
+labels: ["type:bug"]
+body:
+  - type: dropdown
+    id: app
+    attributes:
+      label: App
+      description: Which app is affected?
+      options:
+        - Backend
+        - Web
+        - Dashboard
+        - Mobile
+        - Desktop
+    validations:
+      required: true
+  - type: dropdown
+    id: locale
+    attributes:
+      label: Locale
+      description: Which language/layout shows the problem?
+      options:
+        - ar
+        - en
+        - both
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Steps to reproduce, plus expected vs. actual behavior.
+      placeholder: |
+        1. Go to …
+        2. Click …
+        Expected: …
+        Actual: …
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Device, OS, browser/app version — whatever applies.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots / logs
+      description: Drag images in, or paste error output.

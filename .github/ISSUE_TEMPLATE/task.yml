@@ -1,0 +1,26 @@
+name: ✅ Task
+description: A piece of work that isn't a bug or a feature (chore, infra, marketing…)
+title: "[task] "
+labels: ["type:chore"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Backend
+        - Web
+        - Dashboard
+        - Mobile
+        - Desktop
+        - Infra
+        - Marketing
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What needs to be done?
+      description: Include the definition of done.
+    validations:
+      required: true
